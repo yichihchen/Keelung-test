@@ -1,4 +1,36 @@
-.footer{
-  background: #69F0AE;
-  font-size: 64px;
+//marquee
+//speaker
+.speaker {
+  background-color: rgb(255, 80, 5);
+  height: 6vh; //168px/3840px
+
+
+  .speaker-content {
+    font-size: 2vw; //48px
+    padding-left: 2vw;
+    line-height: 1;
+  }
+
+  .speaker-content-wrap {
+    position: relative; //重要
+    overflow: hidden; //重要
+    width: 100%;
+
+
+  }
+
+
+}
+
+//canvas
+canvas {
+  display: block;
+
+
+}
+
+#marqueeContainer {
+
+  outline: 1px solid red;
+  height: fit-content;
 }
