@@ -15,7 +15,7 @@
 
       <div class="keelung-title d-flex justify-content-between p-4 align-items-center">
         <h1 class="text-white">某某轉運站</h1>
-        <div class="transportation-type text-white fs-1 position-relative" id="transportation-type">
+        <div class="transportation-type text-white position-relative fs-3" id="transportation-type">
           <p class="transportationList text-orange" id="transportationList1" data-content="bus">客運 BUS</p>
           <p class="transportationList" id="transportationList2" data-content="boats">國際航班 INTERNATIONAL ROUTE</p>
           <p class="transportationList" id="transportationList3" data-content="newtaiMa">國內航班 DOMESTIC ROUTE</p>
@@ -193,10 +193,15 @@
             c = (transportationLength + a + 3) % transportationLength;
             d = (transportationLength + a + 5) % transportationLength;
 
+            console.log(`a${a + 1}`);
+            console.log(`b${b + 1}`);
+            console.log(`c${c + 1}`);
+            console.log(`d${d + 1}`);
+
             $('.transportationList').removeClass("text-orange");
             $(`#transportationList${a + 1}`).addClass("text-orange");
 
-            $(`#transportationList${a + 1}`).removeClass("position-top5 position-top70 position-top120 position-top150");
+            $(`#transportationList${a + 1}`).removeClass("position-top5 position-top70 position-top120 position-top150 big-title small-title");
             $(`#transportationList${a + 1}`).addClass("position-top5");
 
             const dataContentValueA1 = $(`#transportationList${a + 1}`).data("content");  //use.data to get the data- value1
@@ -204,6 +209,7 @@
             const dataContentValueC1 = $(`#transportationList${c + 1}`).data("content");
             const dataContentValueD1 = $(`#transportationList${d + 1}`).data("content");
 
+            //the below content depends on the top carousel
             $(`#${dataContentValueA1}`).css("display", "block");
             $(`#${dataContentValueB1}`).css("display", "none");
             $(`#${dataContentValueC1}`).css("display", "none");
@@ -211,21 +217,20 @@
             console.log(`a + 1為${a + 1}` + `a + 1的data屬性為${dataContentValueA1}`);
 
             console.log(`b + 1為${b + 1}`);
-            $(`#transportationList${b + 1}`).removeClass("position-top5 position-top70 position-top120 position-top150");
+            $(`#transportationList${b + 1}`).removeClass("position-top5 position-top70 position-top120 position-top150 big-title small-title");
             $(`#transportationList${b + 1}`).addClass("position-top70");
-
-
+           
             console.log(`b + 1為${b + 1}` + `b + 1的data屬性為${dataContentValueB1}`);
 
             console.log(`c + 1為${c + 1}`);
-            $(`#transportationList${c + 1}`).removeClass("position-top5 position-top70 position-top120 position-top150");
+            $(`#transportationList${c + 1}`).removeClass("position-top5 position-top70 position-top120 position-top150 big-title small-title");
             $(`#transportationList${c + 1}`).addClass("position-top120");
 
 
             console.log(`c + 1為${c + 1}` + `c + 1的data屬性為${dataContentValueC1}`);
 
             console.log(`d + 1為${d + 1}`);
-            $(`#transportationList${d + 1}`).removeClass("position-top5 position-top70 position-top120 position-top150");
+            $(`#transportationList${d + 1}`).removeClass("position-top5 position-top70 position-top120 position-top150 big-title small-title");
             $(`#transportationList${d + 1}`).addClass("position-top150");
 
 

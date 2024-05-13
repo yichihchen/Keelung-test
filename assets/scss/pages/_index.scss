@@ -1,6 +1,6 @@
 .keelung-title {
   background-color: rgb(85, 85, 85);
-  height: 20vh;
+  height: 24vh;
 }
 
 .bus-title,
@@ -15,7 +15,7 @@
 }
 
 .transportation-type {
-  height: 10vh;
+  height: 16vh;
   width: 50vw;
   overflow: hidden;
 
@@ -39,7 +39,7 @@
 
 .position-top70 {
   position: absolute;
-  top: 70%;
+  top: 50%;
   animation: slideIn5 2s ease-in-out;
 }
 
