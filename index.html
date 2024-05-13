@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>index</title>
-  <script type="module" crossorigin src="/Keelung-test/assets/main-754da948.js"></script>
-  <link rel="stylesheet" href="/Keelung-test/assets/main-039525f2.css">
+  <script type="module" crossorigin src="/Keelung-test/assets/main-d89d9269.js"></script>
+  <link rel="stylesheet" href="/Keelung-test/assets/main-3ec79a91.css">
 </head>
 
 <body>
@@ -76,9 +76,44 @@
       <!-- tai Ma -->
       <div id="newtaiMa" style="display:none;">
         <div class="title-medium fs-3 pt-3"><span>新臺馬輪</span><span>|</span><span>航運資訊</span></div>
-        <div class="newtaiMa-title p-4 d-flex justify-content-between text-white fs-4"><span>車次 TRAIN</span><span>時間
+        <div class="newtaiMa-title p-4 d-flex justify-content-between fs-4"><span>車次 TRAIN</span><span>時間
             TIME</span><span>開往 TO</span><span>車種 TYPE</span><span>經由 VIA</span><span>備註
             REMARK</span>
+        </div>
+        <div class="p-4 newtaiMa-wrap">
+          <div class="newtaiMaList d-flex justify-content-between fs-6" id="newtaiMa1"><span>新臺馬輪1
+            </span><span>新臺馬輪1</span><span>掛靠港</span><span>2024-05-12</span><span>2024-05-13</span><span>西03</span>
+          </div>
+        </div>
+        <div class="p-4 newtaiMa-wrap">
+          <div class="newtaiMaList d-flex justify-content-between fs-6" id="newtaiMa2"><span>新臺馬輪1
+            </span><span>新臺馬輪2</span><span>掛靠港</span><span>2024-05-13</span><span>2024-05-14</span><span>西03</span>
+          </div>
+        </div>
+        <div class="p-4 newtaiMa-wrap">
+          <div class="newtaiMaList d-flex justify-content-between fs-6" id="newtaiMa3"><span>新臺馬輪1
+            </span><span>新臺馬輪3</span><span>掛靠港</span><span>2024-05-14</span><span>2024-05-15</span><span>西03</span>
+          </div>
+        </div>
+        <div class="p-4 newtaiMa-wrap">
+          <div class="newtaiMaList d-flex justify-content-between fs-6" id="newtaiMa4"><span>新臺馬輪
+            </span><span>新臺馬輪4</span><span>掛靠港</span><span>2024-05-15</span><span>2024-05-16</span><span>西03</span>
+          </div>
+        </div>
+        <div class="p-4 newtaiMa-wrap">
+          <div class="newtaiMaList d-flex justify-content-between fs-6" id="newtaiMa5"><span>新臺馬輪1
+            </span><span>新臺馬輪5</span><span>掛靠港</span><span>2024-05-16</span><span>2024-05-17</span><span>西03</span>
+          </div>
+        </div>
+        <div class="p-4 newtaiMa-wrap">
+          <div class="newtaiMaList d-flex justify-content-between fs-6" id="newtaiMa6"><span>新臺馬輪1
+            </span><span>新臺馬輪6</span><span>掛靠港</span><span>2024-05-17</span><span>2024-05-18</span><span>西03</span>
+          </div>
+        </div>
+        <div class="p-4 newtaiMa-wrap">
+          <div class="newtaiMaList d-flex justify-content-between fs-6" id="newtaiMa7"><span>新臺馬輪1
+            </span><span>新臺馬輪7</span><span>掛靠港</span><span>2024-05-18</span><span>2024-05-19</span><span>西03</span>
+          </div>
         </div>
       </div>
 
@@ -158,14 +193,23 @@
             </div>
 
           </div>
+       
 
+        </div>
 
-
+    
 
         </div>
 
 
-                  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <!-- marquee -->
+<div class="contianer-fluid speaker d-flex align-items-center">
+
+    <div class="speaker-content-wrap">
+        <p class="speaker-content ticker-item text-white m-0" id="marqueeContainer"><canvas id="marqueeCanvas"></canvas>
+        </p>
+    </div>          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"></script>
           
           <script>
@@ -278,36 +322,73 @@
 
             //API
 
-            const client_id = 'service-99bf4047-07a1-45bc';
-            const client_secret = '0ab27e10-2f7d-47f7-a471-71c24cce7474';
+            // const client_id = 'service-99bf4047-07a1-45bc';
+            // const client_secret = '0ab27e10-2f7d-47f7-a471-71c24cce7474';
 
 
-            function getBusResult() {
-              axios.get(`https://tdx.transportdata.tw/api/basic/v2/Bus/RealTimeByFrequency/Streaming/InterCity?%24filter=1802&%24top=30&%24format=JSON`, {
-                headers: getAuthorizationHeader()
-              })
-                .then(response => {
-                  console.log('Data:', response.data);
-                })
-                .catch(error => {
-                  console.error('Error:', error);
-                })
+            // function getBusResult() {
+            //   axios.get(`https://tdx.transportdata.tw/api/basic/v2/Bus/RealTimeByFrequency/Streaming/InterCity?%24filter=1802&%24top=30&%24format=JSON`, {
+            //     headers: getAuthorizationHeader()
+            //   })
+            //     .then(response => {
+            //       console.log('Data:', response.data);
+            //     })
+            //     .catch(error => {
+            //       console.error('Error:', error);
+            //     })
+            // }
+
+            // function busDataPeriodically() {
+            //   getBusResult();
+            //   setTimeout(busDataPeriodically, 2000);
+            // }
+
+            // function getAuthorizationHeader() {
+            //   // const tdx = new TDX(client_id, client_secret);
+            //   //  填入自己 ID、KEY 開始 這裡沒用好
+            //   return {
+            //     'Authorization': `Basic ${btoa(`${client_id}:${client_secret}`)}`
+            //   };
+            // }
+
+            // busDataPeriodically();
+
+            //跑馬燈
+            const marqueeContainer = document.getElementById('marqueeContainer');
+            const canvas = document.getElementById('marqueeCanvas');
+            const ctx = canvas.getContext('2d');
+            const marqueeText = '親愛的乘客們，1813號公車將於5分鐘內抵達，請要搭乘的乘客盡快前往月台候車。';
+            const textColor = '#FFFFFF';
+            const backgroundColor = '#54585A';
+            const fontSize = 3; // 使用相對大小，這裡是相對於螢幕寬度的百分比
+
+            canvas.width = marqueeContainer.clientWidth;
+            canvas.height = marqueeContainer.clientHeight;
+
+            ctx.font = `${fontSize}vw Arial`; // 使用 vw 單位
+            ctx.fillStyle = textColor;
+
+            function draw() {
+              ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+              const textWidth = ctx.measureText(marqueeText).width;
+              const xPos = (canvas.width - textWidth) / 2; // 計算文字的 x 位置使其置中
+              const yPos = fontSize + canvas.height / 2;
+
+              ctx.fillText(marqueeText, draw.position + xPos, yPos);
+
+              draw.position -= 1;  //speed
+
+              if (draw.position < -textWidth) {
+                draw.position = canvas.width;
+              }
+
+              requestAnimationFrame(draw);
             }
 
-            function busDataPeriodically() {
-              getBusResult();
-              setTimeout(busDataPeriodically, 2000);
-            }
+            draw.position = canvas.width;
 
-            function getAuthorizationHeader() {
-              // const tdx = new TDX(client_id, client_secret);
-              //  填入自己 ID、KEY 開始 這裡沒用好
-              return {
-                'Authorization': `Basic ${btoa(`${client_id}:${client_secret}`)}`
-              };
-            }
-
-            busDataPeriodically();
+            draw();
 
           </script>
 </body>
