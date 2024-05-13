@@ -1,9 +1,10 @@
 //marquee
 //speaker
 .speaker {
+  background-color: rgb(255, 80, 5);
   height: 6vh; //168px/3840px
   position: fixed;
-  bottom: 0;  //put in the bottom of the page
+  bottom: 0;
 
   .speaker-content {
     font-size: 2vw; //48px
