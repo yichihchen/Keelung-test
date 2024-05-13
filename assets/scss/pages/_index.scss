@@ -75,6 +75,8 @@
   animation: boatsSlide 2s ease-in-out;
 }
 
+//train
+
 @keyframes trainSlide {
   from {
     transform: translateY(200%);
@@ -87,6 +89,10 @@
 
 .train-slide {
   animation: trainSlide 2s ease-in-out;
+}
+
+.trainList-wrap {
+  overflow: hidden;
 }
 
 @keyframes busSlide {
@@ -106,4 +112,3 @@
 .busList-wrap {
   overflow: hidden;
 }
-
