@@ -1,36 +1,36 @@
 //marquee
 //speaker
-.speaker {
-  background-color: rgb(255, 80, 5);
-  height: 8vh; //168px/3840px
-  position: fixed;
-  bottom: 0;
-  width: 100vw;
+// .speaker {
+//   background-color: rgb(255, 80, 5);
+//   height: 8vh; //168px/3840px
+//   position: fixed;
+//   bottom: 0;
+//   width: 100vw;
 
-  .speaker-content {
-    font-size: 2vw; //48px
-    padding-left: 2vw;
-    line-height: 1;
-  }
+//   .speaker-content {
+//     font-size: 2vw; //48px
+//     padding-left: 2vw;
+//     line-height: 1;
+//   }
 
-  .speaker-content-wrap {
-    position: relative; //重要
-    overflow: hidden; //重要
-    width: 100%;
-  }
-
-
-}
-
-//canvas
-canvas {
-  display: block;
+//   .speaker-content-wrap {
+//     position: relative; //重要
+//     overflow: hidden; //重要
+//     width: 100%;
+//   }
 
 
-}
+// }
 
-#marqueeContainer {
+// //canvas
+// canvas {
+//   display: block;
 
-  outline: 1px solid red;
-  height: fit-content;
-}
+
+// }
+
+// #marqueeContainer {
+
+//   outline: 1px solid red;
+//   height: fit-content;
+// }

@@ -312,41 +312,41 @@
           // busDataPeriodically();
 
           //跑馬燈
-          const marqueeContainer = document.getElementById('marqueeContainer');
-          const canvas = document.getElementById('marqueeCanvas');
-          const ctx = canvas.getContext('2d');
-          const marqueeText = '親愛的乘客們，1813號公車將於5分鐘內抵達，請要搭乘的乘客盡快前往月台候車。';
-          const textColor = '#FFFFFF';
-          const backgroundColor = '#54585A';
-          const fontSize = 3; // 使用相對大小，這裡是相對於螢幕寬度的百分比
+          // const marqueeContainer = document.getElementById('marqueeContainer');
+          // const canvas = document.getElementById('marqueeCanvas');
+          // const ctx = canvas.getContext('2d');
+          // const marqueeText = '親愛的乘客們，1813號公車將於5分鐘內抵達，請要搭乘的乘客盡快前往月台候車。';
+          // const textColor = '#FFFFFF';
+          // const backgroundColor = '#54585A';
+          // const fontSize = 3; // 使用相對大小，這裡是相對於螢幕寬度的百分比
 
-          canvas.width = marqueeContainer.clientWidth;
-          canvas.height = marqueeContainer.clientHeight;
+          // canvas.width = marqueeContainer.clientWidth;
+          // canvas.height = marqueeContainer.clientHeight;
 
-          ctx.font = `${fontSize}vw Arial`; // 使用 vw 單位
-          ctx.fillStyle = textColor;
+          // ctx.font = `${fontSize}vw Arial`; // 使用 vw 單位
+          // ctx.fillStyle = textColor;
 
-          function draw() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+          // function draw() {
+          //   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            const textWidth = ctx.measureText(marqueeText).width;
-            const xPos = (canvas.width - textWidth) / 2; // 計算文字的 x 位置使其置中
-            const yPos = fontSize + canvas.height / 2;
+          //   const textWidth = ctx.measureText(marqueeText).width;
+          //   const xPos = (canvas.width - textWidth) / 2; // 計算文字的 x 位置使其置中
+          //   const yPos = fontSize + canvas.height / 2;
 
-            ctx.fillText(marqueeText, draw.position + xPos, yPos);
+          //   ctx.fillText(marqueeText, draw.position + xPos, yPos);
 
-            draw.position -= 1;  //speed
+          //   draw.position -= 1;  //speed
 
-            if (draw.position < -textWidth) {
-              draw.position = canvas.width;
-            }
+          //   if (draw.position < -textWidth) {
+          //     draw.position = canvas.width;
+          //   }
 
-            requestAnimationFrame(draw);
-          }
+          //   requestAnimationFrame(draw);
+          // }
 
-          draw.position = canvas.width;
+          // draw.position = canvas.width;
 
-          draw();
+          // draw();
 
         </script>
 </body>
